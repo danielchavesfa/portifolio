@@ -1,0 +1,126 @@
+#js [data-main='animation'].anima {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#js [data-main='animation'].hidden {
+  animation: showOff 0.3s ease;
+}
+
+@keyframes showOff {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+#js [data-main='animation'] svg {
+  transform: scale(2);
+}
+
+#key-left {
+  animation: downSlowly 1s ease;
+}
+
+#key-right {
+  animation: downSlowly 1.5s ease;
+}
+
+#a-purple {
+  animation: diagonalSlowly 0.3s ease;
+}
+
+#a-lilac {
+  animation: diagonalSlowly 0.6s ease;
+}
+
+#a-blue {
+  animation: diagonalSlowly 0.9s ease;
+}
+
+#text,
+#dot {
+  animation: textToLeftSlowly 1s ease;
+}
+
+#d {
+  animation: showSlowlyLeft 1s ease;
+}
+
+#niel {
+  animation: showSlowlyRight 1s ease;
+}
+
+#ch {
+  animation: showSlowlyLeft 0.75s ease;
+}
+
+#ves {
+  animation: showSlowlyRight 0.75s ease;
+}
+
+@keyframes showSlowlyLeft {
+  0% {
+    opacity: 0%;
+    transform: translateX(-10%);
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes showSlowlyRight {
+  0% {
+    opacity: 0%;
+    transform: translateX(10%);
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes textToLeftSlowly {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes diagonalSlowly {
+  0% {
+    opacity: 0;
+    transform: translate(-33%, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes downSlowly {
+  0% {
+    opacity: 0%;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  #js [data-main='animation'] svg {
+    transform: scale(1);
+  }
+}

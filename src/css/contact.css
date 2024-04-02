@@ -1,0 +1,103 @@
+#contact {
+  margin-bottom: 7.5rem;
+}
+
+#contact *::selection {
+  background-color: #70a9ff;
+  color: #333;
+}
+
+#contact #contact-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--main-title-gradient));
+  background-clip: text;
+  background-size: 200%;
+  color: transparent;
+  animation: backgroundGradient 10s ease alternate infinite;
+}
+
+#contact p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+#contact #form-contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 1rem;
+}
+
+#form-contact .form-title {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control > label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.form-control input[type='text'],
+.form-control input[type='email'],
+.form-control textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #eee;
+  border-radius: 4px;
+  outline-color: #4411ff;
+}
+
+.form-control textarea {
+  font-family: inherit;
+}
+
+#form-contact > button[type='submit'] {
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.275rem;
+  text-transform: uppercase;
+  background: #4411ff;
+  border: 2px solid #4411ff;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+#form-contact > button[type='submit']:hover {
+  background: #fff;
+  color: #4411ff;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  #contact {
+    margin-bottom: 5rem;
+  }
+
+  #contact #contact-title {
+    font-size: 2rem;
+  }
+
+  #form-contact > button[type='submit'] {
+    padding: 0.5rem 1rem;
+  }
+}

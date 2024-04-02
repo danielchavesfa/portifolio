@@ -1,0 +1,77 @@
+#experience {
+  margin-bottom: 7.5rem;
+}
+
+#experience *::selection {
+  background: #f1ccff;
+  color: #333;
+}
+
+#experience #experience-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--gradient-experience));
+  background-clip: text;
+  background-size: 200%;
+  color: transparent;
+  animation: backgroundGradient 10s ease alternate infinite;
+}
+
+#experience p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+#experience .knowledge-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#experience
+  .knowledge-list
+  li:not(:nth-child(1), :nth-child(5), :nth-child(9)) {
+  display: flex;
+  padding: 2rem;
+  border-left: 2px solid #cfe2ff;
+}
+
+#experience .knowledge-list li:nth-child(n + 5) {
+  border-top: 2px solid #cfe2ff;
+}
+
+#experience .knowledge-list li > img {
+  margin: auto;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  #experience {
+    margin-bottom: 5rem;
+  }
+
+  #experience #experience-title {
+    font-size: 2rem;
+  }
+
+  #experience .knowledge-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #experience .knowledge-list li:nth-child(n + 4) {
+    border-top: 2px solid #cfe2ff;
+  }
+
+  #experience .knowledge-list li:not(:first-child) {
+    border-left: 2px solid #cfe2ff;
+  }
+
+  #experience .knowledge-list li:nth-child(4),
+  #experience .knowledge-list li:nth-child(7),
+  #experience .knowledge-list li:nth-child(10) {
+    border-left: 2px solid transparent;
+  }
+}

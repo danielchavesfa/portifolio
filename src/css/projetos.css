@@ -1,0 +1,148 @@
+#projects {
+  margin-bottom: 7.5rem;
+}
+
+#projects *::selection {
+  background: rgb(191, 173, 255);
+  color: #fff;
+}
+
+#projects #project-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.5;
+  background: linear-gradient(to right, var(--gradient-project));
+  background-clip: text;
+  background-size: 200%;
+  color: transparent;
+  animation: backgroundGradient 10s ease alternate infinite;
+}
+
+#projects p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.featured-projects > h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.project-item {
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: 0.1s ease;
+}
+
+.project-item:hover {
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
+}
+
+.project-item > h3 {
+  font-size: 1.275rem;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-item .thumbnail {
+  margin-bottom: 1rem;
+}
+
+.project-item .thumbnail > img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.used-in-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.technology-used,
+.tools-used {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-content: start;
+  height: 100%;
+}
+
+.technology-used ul img,
+.tools-used ul img {
+  transition: 0.1s ease;
+  width: 32px;
+}
+
+.technology-used ul img:hover,
+.tools-used ul img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.tech-icon,
+.tool-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+.tech-icon svg,
+.tool-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #41f;
+}
+
+.technology-used h4,
+.tools-used h4 {
+  grid-column: 2;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.technology-used ul,
+.tools-used ul {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 32px);
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  #projects {
+    margin-bottom: 5rem;
+  }
+
+  #projects #project-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+}
