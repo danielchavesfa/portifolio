@@ -68,6 +68,7 @@
   padding-bottom: 0.5rem;
   align-self: flex-start;
   color: #4411ff;
+  font-family: monospace;
 }
 
 #main a::after {
